@@ -1,0 +1,7 @@
+@for (article of articles(); track article.id) {
+    <div class="article-box" [routerLink]="[article.id]">
+        <p>{{ article.title }}</p>
+        <img [style]="'view-transition-name: article-img-' + article.id" [src]="article.mainImage" alt="">
+        <div [innerHTML]="article.content"></div>
+    </div>
+}O

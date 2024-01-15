@@ -1,0 +1,10 @@
+<button [routerLink]="'/articles'">BACK</button>
+{{ id }}
+
+@if (article) {
+    <div class="article-box">
+        <p>{{ article.title }}</p>
+        <img [style]="'view-transition-name: article-img-' + article.id" [src]="article.mainImage" alt="">
+        <div [innerHTML]="article.content"></div>
+    </div>
+}
